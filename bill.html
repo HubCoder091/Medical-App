@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Bill</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+        }
+        .print-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .print-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prescription Bill</h1>
+        <p><strong>Patient Name:</strong> <span id="patient-name"></span></p>
+        <p><strong>Medication:</strong> <span id="medication"></span></p>
+        <p><strong>Dosage:</strong> <span id="dosage"></span></p>
+        <button class="print-btn" onclick="window.print()">Print Prescription</button>
+    </div>
+
+    <script src="bill.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

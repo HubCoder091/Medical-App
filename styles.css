@@ -1,0 +1,365 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpeg'); /* Add your image here */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333; /* Default text color */
+    text-align: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header */
+header h1 {
+    color: #4a90e2; /* Soft blue */
+    margin-bottom: 40px;
+}
+
+/* Google Maps Section */
+#map-section {
+    margin: 20px 0;
+    background-color: #e3f2fd; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(252, 247, 247); /* Light shadow */
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    background-color: #eaeaea; /* Light gray */
+}
+
+/* E-Prescription Section */
+#prescription-section {
+    margin: 20px 0;
+    background-color: #ffe0b2; /* Light orange background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#prescription-form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#prescription-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ff9800; /* Orange border */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text */
+}
+
+/* Change color on input */
+#prescription-form input:focus {
+    border-color: #4caf50; /* Green when typing */
+}
+
+/* Submit button */
+#prescription-form button {
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#prescription-form button:hover {
+    background-color: #388e3c; /* Darker green */
+}
+
+/* Confirmation Popup Styling */
+#confirmation-popup {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+#confirmation-popup i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Popup Fade-In and Fade-Out Animations */
+.show-popup {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* Emergency Section */
+#emergency-section {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Stack the items vertically */
+    margin: 20px 0;
+    background-color: #ffccbc; /* Light red background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#emergency-btn {
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center the content */
+    background-color: #ff5722; /* Orange */
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#emergency-btn i {
+    margin-right: 10px; /* Add space between the icon and text */
+}
+
+#emergency-btn:hover {
+    background-color: #e64a19; /* Darker orange */
+}
+
+/* Emergency Popup Styling */
+#emergency-popup {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5722; /* Orange */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgb(206, 77, 77); /* Light shadow */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+/* Popup Fade-In and Fade-Out Animations */
+.show-popup {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* Chatbot Section */
+#chatbot-section {
+    margin: 20px 0;
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#chatbot-section input {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #2196F3; /* Blue border */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text */
+}
+
+/* Change color on input */
+#chatbot-section input:focus {
+    border-color: #4caf50; /* Green when typing */
+}
+
+/* Send button */
+#chat-send-btn {
+    background-color: #2196F3; /* Blue */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#chat-send-btn:hover {
+    background-color: #1976D2; /* Darker blue */
+}
+#chat-response {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e3f2fd; /* Light blue for the response area */
+    border: 1px solid #2196F3; /* Blue border */
+    border-radius: 8px;
+    display: none; /* Hide by default */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for navigation buttons */
+.navigate-button {
+    position: fixed;
+    bottom: 20px;  /* Distance from the bottom of the page */
+    right: 20px;   /* Distance from the right of the page */
+    font-size: 24px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 50%; /* Circle */
+    width: 50px;  /* Width of the button */
+    height: 50px; /* Height of the button */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-decoration: none; /* Remove underline */
+}
+
+.navigate-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.navigate-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.navigate-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #f4f4f4;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#bill-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#prescription-details {
+    margin-bottom: 20px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}

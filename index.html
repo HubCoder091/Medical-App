@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmergenC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <header>
+        <h1>EmergenC</h1>
+    </header>
+
+     <!-- Move the Find Nearest Medical Facility section here, right below the header -->
+     <section id="find-facility-section" style="text-align: center; margin: 20px;">
+        <h2>Find Nearest Medical Facility</h2>
+        <a href="https://www.google.com/maps/search/?api=1&query=best+hospital+near+me" target="_blank" id="find-facility-link">
+            <button style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Find Nearest Medical Facility
+            </button>
+        </a>
+    </section>
+
+    <!-- E-Prescription Section -->
+    <section id="prescription-section">
+        <h2>E-Prescription</h2>
+        <form id="prescription-form">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+            
+            <label for="medication">Medication:</label>
+            <input type="text" id="medication" name="medication" required>
+
+            <label for="dosage">Dosage:</label>
+            <input type="text" id="dosage" name="dosage" required>
+
+            <button type="submit">Send Prescription</button>
+        </form>
+    </section>
+
+    <!-- Confirmation Popup for e-prescription submission -->
+    <div id="confirmation-popup" class="hidden">
+        <i class="fas fa-check-circle"></i> <!-- Tick icon -->
+        <span id="confirmation-message"></span>
+        <script src="prescription.js"></script> <!-- Include your JavaScript -->
+    </div>
+
+    <!-- Emergency Section -->
+    <section id="emergency-section">
+        <h2>Emergency Alert</h2>
+        <button id="emergency-btn">
+            <i class="fas fa-bell"></i> Trigger Emergency Alert <!-- Bell icon -->
+        </button>
+    </section>
+
+    <!-- Popup for emergency alert -->
+    <div id="emergency-popup" class="hidden">
+        <i class="fas fa-exclamation-triangle"></i>
+        Emergency Alert Triggered!
+    </div>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot-section"></section>
+        <h2>Chatbot</h2>
+        <a href="https://www.ratemds.com" target="_blank"> <!-- Replace with your link -->
+            <button>Open Chatbot</button>
+        </a>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
