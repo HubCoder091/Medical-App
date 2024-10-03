@@ -132,7 +132,7 @@ const doctorNames = [
 function sendMessage() {
     const userInput = document.getElementById("user-input").value.trim().toLowerCase();
     if (userInput === "") return; // Ignore empty inputs
-    
+
     displayMessage(userInput, "user");
 
     // Greeting responses
@@ -141,8 +141,10 @@ function sendMessage() {
         document.getElementById("user-input").value = ""; // Clear input
         return;
     }
-    if (["Thanks","Thank you","Great","Nice","Work","Good"].includes(userInput)) {
-        displayMessage("Have a great day😊! Feel free to ask anything", "bot");
+
+    // Specific response for appreciation phrases
+    if (["thanks", "thank you", "great", "nice", "work", "good"].some(phrase => userInput.includes(phrase.toLowerCase()))) {
+        displayMessage("Have a great day 😊! Feel free to ask anything", "bot");
         document.getElementById("user-input").value = ""; // Clear input
         return;
     }
@@ -151,7 +153,7 @@ function sendMessage() {
     if (userInput.includes("book") && userInput.includes("appointment")) {
         const doctorName = getRandomDoctorName();
         setTimeout(() => {
-            displayMessage(`Booking an appointment with ${doctorName}. Booking confirmed✅  You can Contact: 9789265578 to ask for timing.`, "bot");
+            displayMessage(`Booking an appointment with Dr. ${doctorName}. Booking confirmed ✅ You can contact: 9789265578 to ask for timing.`, "bot");
         }, 500);
         document.getElementById("user-input").value = ""; // Clear input
         return;
@@ -212,3 +214,4 @@ function getRandomDoctorName() {
     const randomIndex = Math.floor(Math.random() * doctorNames.length);
     return doctorNames[randomIndex]; // Return a random doctor name
 }
+
