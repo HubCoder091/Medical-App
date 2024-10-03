@@ -146,7 +146,7 @@ function sendMessage() {
     if (userInput.includes("book") && userInput.includes("appointment")) {
         const doctorName = getRandomDoctorName();
         setTimeout(() => {
-            displayMessage(`Booking an appointment with Dr. ${doctorName}. Please wait for confirmation.`, "bot");
+            displayMessage(`Booking an appointment with ${doctorName}. Booking confirmed✅  You can Contact: 9789265578 to ask for timing.`, "bot");
         }, 500);
         document.getElementById("user-input").value = ""; // Clear input
         return;
@@ -200,7 +200,7 @@ function getRemedyResponse(condition) {
             return item.remedy;
         }
     }
-    return "Sorry, I don't have a remedy for that condition.";
+    return "Sorry, I don't have a remedy for that condition in my database.";
 }
 
 function getRandomDoctorName() {
