@@ -153,7 +153,7 @@ function sendMessage() {
     if (userInput.includes("book") && userInput.includes("appointment")) {
         const doctorName = getRandomDoctorName();
         setTimeout(() => {
-            displayMessage(`Booking an appointment with Dr. ${doctorName}. Booking confirmed ✅ You can contact: 9789265578 to ask for timing.`, "bot");
+            displayMessage(`Booking an appointment with ${doctorName}. Booking confirmed ✅ You can contact: 9789265578 to ask for timing.`, "bot");
         }, 500);
         document.getElementById("user-input").value = ""; // Clear input
         return;
