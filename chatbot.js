@@ -141,6 +141,11 @@ function sendMessage() {
         document.getElementById("user-input").value = ""; // Clear input
         return;
     }
+    if (["Thanks","Thank you","Great","Nice","Work","Good"].includes(userInput)) {
+        displayMessage("Have a great day😊! Feel free to ask anything", "bot");
+        document.getElementById("user-input").value = ""; // Clear input
+        return;
+    }
 
     // Check if user is asking to book an appointment
     if (userInput.includes("book") && userInput.includes("appointment")) {
