@@ -254,3 +254,40 @@ document.getElementById("cost").textContent = prescriptionData.cost.toFixed(2);
 document.getElementById("print-btn").onclick = function() {
     window.print();
 };
+// chatbot.js
+
+// Function to handle sending a message to the chatbot
+document.getElementById('send-btn').addEventListener('click', function() {
+    const userInput = document.getElementById('chat-input').value;
+    if (userInput.trim() !== "") {
+        // Display user's message in the chat output
+        displayMessage("You: " + userInput);
+        
+        // Assuming you're using Google Gemini AI or any other API
+        // Simulate sending message to the chatbot and getting a response
+        sendMessageToChatbot(userInput).then(response => {
+            displayMessage("Chatbot: " + response); // Show chatbot response
+        });
+
+        // Clear the input field
+        document.getElementById('chat-input').value = '';
+    }
+});
+
+function sendMessageToChatbot(message) {
+    // Here you would integrate with your chatbot backend or API (e.g., Google Gemini AI)
+    return new Promise((resolve) => {
+        // Simulated chatbot response (Replace this with actual API call)
+        setTimeout(() => {
+            resolve("This is a simulated response to: " + message);
+        }, 1000);
+    });
+}
+
+function displayMessage(message) {
+    const chatOutput = document.getElementById('chat-output');
+    const messageElement = document.createElement('p');
+    messageElement.textContent = message;
+    chatOutput.appendChild(messageElement);
+    chatOutput.scrollTop = chatOutput.scrollHeight; // Scroll to the latest message
+}
