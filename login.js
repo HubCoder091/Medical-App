@@ -13,7 +13,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     if (inputUsername === storedUsername && inputPassword === storedPassword) {
         alert("Login successful! Redirecting to the main page.");
         // Redirect to the main page or dashboard
-        window.location.href = "index.html";
+        window.location.href = "login.html";
     } else {
         alert("Incorrect username or password. Please try again.");
     }
@@ -29,7 +29,7 @@ function handleLogin(event) {
     // let's assume the correct username is 'user' and password is 'pass'.
     if (username === "user" && password === "pass") {
         // Redirect to index.html if login is successful
-        window.location.href = "index.html";
+        window.location.href = "login.html";
     } else {
         // Show error message if login fails
         document.getElementById("error-message").classList.remove("hidden");

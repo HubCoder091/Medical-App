@@ -19,5 +19,5 @@ document.getElementById("signup-form").addEventListener("submit", function(event
     alert("Sign Up successful! Redirecting to login page.");
 
     // Redirect to login page
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 });
