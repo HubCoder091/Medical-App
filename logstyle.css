@@ -1,0 +1,133 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0e7f9; /* Cool light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in; /* Animation for body fade-in */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Form container (for both login and signup) */
+.login-container, .signup-container {
+    background-color: #f0f7f9; /* Soft white with a hint of blue */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 350px;
+    text-align: center;
+    border: 2px solid #79a3b1; /* Cool muted blue border */
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards; /* Slide-in effect */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Keyframes for the form container slide-in animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Form titles */
+.login-container h2, .signup-container h2 {
+    color: #447b8e; /* Cool teal blue for headings */
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Input fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #a9c7d2; /* Light greyish-blue border */
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #e3eff5; /* Light blue for input background */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transition for focus */
+}
+
+/* Focus state with animation */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #447b8e; /* Darker teal blue focus border */
+    box-shadow: 0 0 10px rgba(68, 123, 142, 0.5); /* Soft glow on focus */
+    outline: none;
+    background-color: #ffffff; /* Lighter background on focus */
+}
+
+/* Buttons */
+button {
+    background-color: #79a3b1; /* Cool muted blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover and click */
+}
+
+/* Button hover and click effects */
+button:hover {
+    background-color: #4d7180; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight shrink on click */
+}
+
+/* Error message */
+#error-message {
+    color: #d32f2f; /* Red color for error messages */
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Sign Up text styling */
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #79a3b1; /* Cool muted blue */
+}
+
+.signup-text a {
+    color: #447b8e; /* Darker teal blue */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for link hover */
+}
+
+.signup-text a:hover {
+    color: #005662; /* Dark teal on hover */
+    text-decoration: underline;
+}
+
+/* Animation for the whole form */
+@keyframes formSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
