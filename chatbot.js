@@ -535,14 +535,14 @@ function sendMessage() {
     displayMessage(userInput, "user");
 
     // Greeting responses
-    if (["hi", "hello", "hey","how"].includes(userInput)) {
+    if (["hi", "hello", "hey","how","Good morning"].includes(userInput)) {
         displayMessage("Hello! How can I assist you today?", "bot");
         document.getElementById("user-input").value = ""; // Clear input
         return;
     }
 
     // Specific response for appreciation phrases
-    if (["thanks", "thank you", "great", "nice", "work", "good"].some(phrase => userInput.includes(phrase.toLowerCase()))) {
+    if (["thanks", "thank you", "great", "nice", "work", "good","bye","Good night"].some(phrase => userInput.includes(phrase.toLowerCase()))) {
         displayMessage("Have a great day 😊! Feel free to ask anything", "bot");
         document.getElementById("user-input").value = ""; // Clear input
         return;
