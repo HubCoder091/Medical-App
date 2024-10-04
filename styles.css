@@ -364,81 +364,130 @@ button:hover {
     background: #45a049;
 }
 /* styles.css */
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Soft background for app-like look */
     margin: 0;
     padding: 0;
 }
 
+/* Main chat container styling */
 .chat-container {
     width: 400px;
     height: 600px;
-    background-color: #fff;
+    background-color: #ffffff; /* Pure white for modern look */
     margin: 50px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer, more professional shadow */
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 12px; /* Slightly larger border-radius for smoother edges */
+    overflow: hidden; /* Prevent overflow of content */
 }
 
+/* Chat header styling */
 .chat-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
+    background-color: #007bff; /* More professional blue tone */
+    color: #ffffff;
+    padding: 20px; /* Increase padding for cleaner layout */
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
 }
 
+/* Chatbox where messages appear */
 .chat-box {
     flex: 1;
-    padding: 10px;
+    padding: 15px;
     overflow-y: auto;
-    background-color: #fafafa;
+    background-color: #f8f9fa; /* Subtle light background for readability */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Adds space between each message */
+    scroll-behavior: smooth;
 }
 
+/* Input box styling */
 .input-box {
     display: flex;
-    padding: 10px;
-    border-top: 1px solid #ddd;
+    padding: 15px;
+    border-top: 1px solid #dee2e6; /* Light border for separation */
+    background-color: #f1f3f5; /* Slightly darker tone for input area */
 }
 
+/* Input field styling */
 input[type="text"] {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 10px;
+    padding: 12px 15px; /* More spacious padding */
+    border: 1px solid #ced4da; /* Softer border color */
+    border-radius: 6px; /* Rounded input field for app feel */
+    font-size: 16px;
+    color: #495057;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
 }
 
+/* Input hover focus effect */
+input[type="text"]:focus {
+    border-color: #80bdff;
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25); /* Subtle blue glow on focus */
+}
+
+/* Button styling */
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    padding: 12px 20px;
+    background-color: #007bff; /* Primary app button color */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px; /* Rounded button for modern feel */
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Slightly darker on hover */
 }
 
+/* Message styling */
 .message {
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px 15px;
+    border-radius: 10px;
     width: fit-content;
     max-width: 80%;
+    font-size: 15px;
+    line-height: 1.5;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to messages */
 }
 
+/* User message styling */
 .user-message {
-    background-color: #dff9fb;
+    background-color: #007bff; /* Matches button color */
+    color: white;
     align-self: flex-end;
 }
 
+/* Bot message styling */
 .bot-message {
-    background-color: #f1f1f1;
+    background-color: #f1f3f5; /* Subtle grey background for bot messages */
+    color: #333333;
     align-self: flex-start;
+}
+
+/* Scrollbar styling for chatbox */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 123, 255, 0.3); /* Subtle blue scrollbar */
+    border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background-color: #f1f3f5; /* Match the background color of the chatbox */
 }
