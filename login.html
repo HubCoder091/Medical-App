@@ -31,13 +31,26 @@
             
             <label for="medication">Medication:</label>
             <input type="text" id="medication" name="medication" required>
-
+    
             <label for="dosage">Dosage:</label>
             <input type="text" id="dosage" name="dosage" required>
-
+    
             <button type="submit">Send Prescription</button>
         </form>
-    </section>
+    
+        <!-- Link to view saved prescriptions -->
+        <p><a href="#" id="view-prescription-history">View Prescription History</a></p>
+    
+        <!-- Button to delete the prescription history -->
+        <button id="delete-prescription-history" style="display:none;">Delete Prescription History</button>
+    
+        <!-- Section to display saved prescriptions -->
+        <div id="prescription-history" style="display:none;">
+            <h3>Prescription History</h3>
+            <div id="history-content"></div>
+        </div>
+    </section>    
+    
 
     <!-- Confirmation Popup for e-prescription submission -->
     <div id="confirmation-popup" class="hidden">
@@ -45,6 +58,8 @@
         <span id="confirmation-message"></span>
         <script src="prescription.js"></script> <!-- Include your JavaScript -->
     </div>
+
+
 
     <!-- Emergency Section -->
     <section id="emergency-section">
