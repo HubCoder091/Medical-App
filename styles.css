@@ -1,40 +1,47 @@
 /* General Page Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9; /* Soft light background */
-    color: #333; /* Neutral dark text color */
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpeg'); /* Add your image here */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333; /* Default text color */
     text-align: center;
     padding: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Header */
 header h1 {
-    color: #2c3e50; /* Dark slate blue */
+    color: #4a90e2; /* Soft blue */
     margin-bottom: 40px;
 }
 
 /* Google Maps Section */
 #map-section {
     margin: 20px 0;
-    background-color: #ecf0f1; /* Very light gray background */
+    background-color: #e3f2fd; /* Light blue background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    box-shadow: 0 0 10px rgb(252, 247, 247); /* Light shadow */
 }
 
 #map {
     width: 100%;
     height: 300px;
-    background-color: #bdc3c7; /* Light gray for placeholder */
+    background-color: #eaeaea; /* Light gray */
 }
 
 /* E-Prescription Section */
 #prescription-section {
     margin: 20px 0;
-    background-color: #fdf3e1; /* Light cream background */
+    background-color: #ffe0b2; /* Light orange background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Light shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 #prescription-form {
@@ -48,19 +55,19 @@ header h1 {
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
-    border: 2px solid #95a5a6; /* Neutral border */
+    border: 2px solid #ff9800; /* Orange border */
     background-color: #ffffff; /* White background */
-    color: #333;
+    color: #333; /* Dark text */
 }
 
 /* Change color on input */
 #prescription-form input:focus {
-    border-color: #3498db; /* Soft blue when typing */
+    border-color: #4caf50; /* Green when typing */
 }
 
 /* Submit button */
 #prescription-form button {
-    background-color: #3498db; /* Professional blue */
+    background-color: #4caf50; /* Green */
     color: white;
     padding: 10px;
     border: none;
@@ -70,7 +77,7 @@ header h1 {
 }
 
 #prescription-form button:hover {
-    background-color: #2980b9; /* Darker blue */
+    background-color: #388e3c; /* Darker green */
 }
 
 /* Confirmation Popup Styling */
@@ -79,13 +86,13 @@ header h1 {
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #2ecc71; /* Professional green */
+    background-color: #4caf50; /* Green */
     color: white;
     padding: 15px 30px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 1000;
@@ -94,27 +101,36 @@ header h1 {
 }
 
 #confirmation-popup i {
-    margin-right: 10px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Popup Fade-In and Fade-Out Animations */
+.show-popup {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 /* Emergency Section */
 #emergency-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Stack the items vertically */
     margin: 20px 0;
-    background-color: #f2d7d5; /* Light muted red */
+    background-color: #ffccbc; /* Light red background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 #emergency-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e74c3c; /* Professional red */
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center the content */
+    background-color: #ff5722; /* Orange */
     color: white;
     padding: 15px;
     font-size: 18px;
@@ -125,17 +141,48 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
+#emergency-btn i {
+    margin-right: 10px; /* Add space between the icon and text */
+}
+
 #emergency-btn:hover {
-    background-color: #c0392b; /* Darker red */
+    background-color: #e64a19; /* Darker orange */
+}
+
+/* Emergency Popup Styling */
+#emergency-popup {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5722; /* Orange */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgb(206, 77, 77); /* Light shadow */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+/* Popup Fade-In and Fade-Out Animations */
+.show-popup {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 /* Chatbot Section */
 #chatbot-section {
     margin: 20px 0;
-    background-color: #ffffff;
+    background-color: #ffffff; /* White background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 #chatbot-section input {
@@ -143,18 +190,19 @@ header h1 {
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
-    border: 2px solid #bdc3c7;
-    background-color: #ffffff;
-    color: #333;
+    border: 2px solid #2196F3; /* Blue border */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text */
 }
 
+/* Change color on input */
 #chatbot-section input:focus {
-    border-color: #3498db;
+    border-color: #4caf50; /* Green when typing */
 }
 
 /* Send button */
 #chat-send-btn {
-    background-color: #3498db;
+    background-color: #2196F3; /* Blue */
     color: white;
     padding: 10px;
     border: none;
@@ -164,31 +212,282 @@ header h1 {
 }
 
 #chat-send-btn:hover {
-    background-color: #2980b9;
+    background-color: #1976D2; /* Darker blue */
 }
-
 #chat-response {
     margin-top: 10px;
     padding: 10px;
-    background-color: #ecf0f1;
-    border: 1px solid #bdc3c7;
+    background-color: #e3f2fd; /* Light blue for the response area */
+    border: 1px solid #2196F3; /* Blue border */
     border-radius: 8px;
-    display: none;
+    display: none; /* Hide by default */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navigation Button */
+header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for navigation buttons */
 .navigate-button {
-    background-color: #2ecc71;
-    color: white;
+    position: fixed;
+    bottom: 20px;  /* Distance from the bottom of the page */
+    right: 20px;   /* Distance from the right of the page */
+    font-size: 24px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
     border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border-radius: 50%; /* Circle */
+    width: 50px;  /* Width of the button */
+    height: 50px; /* Height of the button */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-decoration: none; /* Remove underline */
 }
 
 .navigate-button:hover {
-    background-color: #27ae60;
+    background-color: #45a049; /* Darker green on hover */
+}
+.navigate-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.navigate-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #f4f4f4;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#bill-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#prescription-details {
+    margin-bottom: 20px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+/* styles.css */
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Soft background for app-like look */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main chat container styling */
+.chat-container {
+    width: 400px;
+    height: 600px;
+    background-color: #ffffff; /* Pure white for modern look */
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer, more professional shadow */
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px; /* Slightly larger border-radius for smoother edges */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+/* Chat header styling */
+.chat-header {
+    background-color: #007bff; /* More professional blue tone */
+    color: #ffffff;
+    padding: 20px; /* Increase padding for cleaner layout */
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Chatbox where messages appear */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f8f9fa; /* Subtle light background for readability */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Adds space between each message */
+    scroll-behavior: smooth;
+}
+
+/* Input box styling */
+.input-box {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #dee2e6; /* Light border for separation */
+    background-color: #f1f3f5; /* Slightly darker tone for input area */
+}
+
+/* Input field styling */
+input[type="text"] {
+    flex: 1;
+    padding: 12px 15px; /* More spacious padding */
+    border: 1px solid #ced4da; /* Softer border color */
+    border-radius: 6px; /* Rounded input field for app feel */
+    font-size: 16px;
+    color: #495057;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+/* Input hover focus effect */
+input[type="text"]:focus {
+    border-color: #80bdff;
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25); /* Subtle blue glow on focus */
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #007bff; /* Primary app button color */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Rounded button for modern feel */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Slightly darker on hover */
+}
+
+/* Message styling */
+.message {
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 80%;
+    font-size: 15px;
+    line-height: 1.5;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to messages */
+}
+
+/* User message styling */
+.user-message {
+    background-color: #007bff; /* Matches button color */
+    color: white;
+    align-self: flex-end;
+}
+
+/* Bot message styling */
+.bot-message {
+    background-color: #f1f3f5; /* Subtle grey background for bot messages */
+    color: #333333;
+    align-self: flex-start;
+}
+
+/* Scrollbar styling for chatbox */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 123, 255, 0.3); /* Subtle blue scrollbar */
+    border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background-color: #f1f3f5; /* Match the background color of the chatbox */
 }
